@@ -1,0 +1,35 @@
+250729
+今日のコーディングはFor文と合計を出力することをした。
+まだ幼稚園のレベルだけど、今日は自らできるだけしようと努力した。
+そうやって　下のコードー組んだ。ただ物の総合計を一つ一つずつ求めるものだ！
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int X = sc.nextInt(); // X는 총가격
+		int N = sc.nextInt(); // N은 물건 개수 즉, 몇 종류를 입력할 것인가
+		
+		int sum = 0; // GPT가 고쳐준 부분 sum 선언을 여기서 해야됨. 
+		
+		for ( int i=0; i < N; i++) {
+			
+			int a = sc.nextInt(); // a 라는 개별 물건의 가격
+			int b = sc.nextInt(); // b 래는 개별 물건의 개수
+			sum = sum+(a*b); //sum += a*b; 랑 같은 의미
+		}
+			if ( sum == X ) { // 아 if를 for 닫고 해야되는구나 ㅜ
+				System.out.print( "Yes" );
+			}
+			else {
+				System.out.print( "No");
+			}
+	
+	}    
+		 
+}
+
+ｗｗｗｗｗｗ他の人が見たらめっちゃかわいい水準だと思うけどわざわざオープンして、いつかここまで成長したって
+知らせたい！ｗｗｗ
