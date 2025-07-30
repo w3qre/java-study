@@ -1,0 +1,17 @@
+250730
+今日は新しいクラスのBufferedReader文を学んだ。　Scanner文とは違うものが多くて、すこし複雑だったけど
+後ではBufferedReaderをよく使うようになると聞いたから、あれこれ練習を頑張らないといけないですね！
+
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+Integer.parseInt(br.readLine());
+bw.newLine();
+bw.flush();
+bw.close();
+for ( int i = 1; i <= N; i++) {
+			for ( int j = 1; j<=i; j++) {
+   	}
+  }
+
+こんなの二重For文も学んだ。まだ勉強しないといけないものが多い！
+これは本当に基本的な文章だけど、まだ見なくて書けない、、、　ファイト！
