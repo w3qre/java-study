@@ -1,0 +1,51 @@
+250803
+この間具合がとても悪くて少し休んだ。
+今日は配列をする方を勉強した。
+
+int[] arr = new int [9];
+		int max = 0;
+		int index = 0;
+		
+		for ( int i = 0; i < 9; i++) {
+			arr[i] = Integer.parseInt(br.readLine());
+			
+			if ( arr[i] > max) {
+				max = arr[i];
+				index = i+1;
+
+
+こうやって反復されてる数を配列を使って簡単に作るのだ。けれど、まだ完全に理解できなってるわ。
+配列を利用してとく問題に接して少し壁を感じた。。。。なんかわかるような気もする、わからなさそう気もして、、イライラになった
+今日はここまでといっても絶対諦めない～！　、下は僕はイライラさせられるコード、必ず説いてあげる。
+
+import java.io.*;
+
+public class Main {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		String[] input = br.readLine().split(" ");
+		int N = Integer.parseInt(input[0]); 
+		int M = Integer.parseInt(input[1]);  
+		
+		int[] box = new int[N+1]; 
+		
+		for ( int i = 0; i < M; i++) { 
+			
+			String[] arr = br.readLine().split(" "); 
+			int a = Integer.parseInt(arr[0]); // 
+			int b = Integer.parseInt(arr[1]); // 
+			int c = Integer.parseInt(arr[2]); // 
+			
+			for ( int j = a; j <= b; j++ ) { 
+				box[j] = c; // 
+			}
+			
+		}
+		
+		for ( int i = 1; i <= N; i++) {
+			System.out.print(box[i]+ " ");
+		}
+		
+	}
+}
