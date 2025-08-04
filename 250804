@@ -1,0 +1,31 @@
+250804
+今日もずっと昨日と似てる配列を指定して配列の中で位置を変えてその結果を出力する問題を勉強した。
+
+	 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		 // 정수 입력 받을 준비
+		 String[] st = br.readLine().split(" ");
+		 int N = Integer.parseInt(st[0]);
+		 int M = Integer.parseInt(st[1]); 
+		 // 바구니 배열지정 후 각 1~N번마다 같은 번호 공 넣음
+		 int[] box = new int[N+1]; 
+		 for ( int i = 1; i <= N; i++ ) { 
+			 box[i] = i;
+		 }
+		 // 바구니에 공넣기 진행
+		 for ( int m = 0; m < M; m++) {
+			String[] input = br.readLine().split(" ");
+			int i = Integer.parseInt(input[0]);
+			int j = Integer.parseInt(input[1]);
+		    // 입력 숫자에 따라 공 바꾸기
+			int temp = box[i]; // 이걸 swap이라고 하는데 쉽게말해서 i랑 j랑 바꾸는데 i=j 하고 j=i해버리면 이미 위에서 값이 같아져버림
+			box[i]= box[j]; // 그래서 box[i]를 box[j]로 바꾸고, 다시 box[j]는 미리 저장해놨던 temp=구i 값으로 해서 교환하는것
+			box[j]= temp; 
+		 }
+		 
+		 // 결과 출력하는데 1번부터N번까지 바뀐공번호 출력
+		 for ( int i = 1; i <= N; i++) {
+			 System.out.print(box[i]+ " ");
+		 }
+
+   とりあえず、まだとても難しかった。。。。ずっと理解してみようとしても、、、僕の脳の能力が足りない。。
+   できるようになるまでずっと挑戦するつもりだ。
